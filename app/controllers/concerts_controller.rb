@@ -8,7 +8,7 @@ class ConcertsController < ApplicationController
     venue = Venue.find(params[:venues].to_i)
     @concert.venue = venue
     @concert.save
-    @venues = Venue.all
+    @venues = Venue.order(:name)
     @concerts = Concert.order(:date)
   end
 end

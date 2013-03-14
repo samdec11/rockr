@@ -3,8 +3,9 @@
 #venue_form
 #concert_form
 %ol#concerts
-  - @concerts.each do |concert|
-    %li
-    = concert.try(:artist)
-    = concert.try(:date)
-    = concert.try(:venue).try(:name)
+  = render :partial => 'home/list'
+  / - @concerts.each do |concert|
+  /   %li
+  /   = concert.try(:artist)
+  /   = concert.try(:date)
+  /   = concert.try(:venue).try(:name)
