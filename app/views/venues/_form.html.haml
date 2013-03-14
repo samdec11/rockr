@@ -1,0 +1,5 @@
+= form_for @venue, :remote => true do |f|
+  = f.label :name
+  = f.text_field :name, :autofocus => true
+  = button_to_function('Cancel', 'cancel_venue_form()')
+  = f.submit

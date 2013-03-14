@@ -1,0 +1,6 @@
+= link_to('New Venue', new_venue_path, :remote => true)
+= link_to('New Concert', new_concert_path, :remote => true)
+#venue_form
+#concert_form
+%ol#venues
+  = render :partial => 'list'

@@ -1,0 +1,9 @@
+- if @venues != nil
+  - @venues.each do |venue|
+    %li
+      = venue.name
+      - if venue.concerts != nil
+        - venue.concerts.order(:date) do |concert|
+          %ul
+            %li= concert.artist
+            %li= concert.date
